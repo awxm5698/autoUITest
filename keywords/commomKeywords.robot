@@ -1,7 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
 Library           ../lib/MyLibrary.py
-Library           ../lib/AppiumLibraryExtender.py
 
 *** Keywords ***
 login
