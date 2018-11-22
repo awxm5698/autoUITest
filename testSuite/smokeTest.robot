@@ -1,7 +1,6 @@
 *** Settings ***
 Resource          ../keywords/openApp.robot
 Resource          ../keywords/commomKeywords.robot
-Resource          ../testData/smokeTestVariables.robot
 
 *** Test Cases ***
 01
