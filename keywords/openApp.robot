@@ -18,7 +18,7 @@ open
 
 openAndroid
     [Arguments]    ${noReset}    # true--noRest|false--reset
-    open Application    ${url}    noReset=${noReset}    &{android}
+    open Application    ${ip}:${port}/wd/hub    noReset=${noReset}    &{android}
     sleep    2
 
 openIos
