@@ -48,3 +48,4 @@ createNewApplication
     click text    Ke Qi
     sleep    2
     click text    立即提交
+    sleep    2
