@@ -34,7 +34,7 @@ class MyLibrary(object):
         driver = self._current_application()
         driver.execute_script("mobile: scroll", {'direction': 'right'})
 
-    def swipe_drag(self,fromX,fromY,toX,toY,duration=1000):
+    def swipe_drag(self,start_x,start_y,end_x,end_y,duration=1000):
         driver = self._current_application()
         width = driver.get_window_size()['width']
         height = driver.get_window_size()['height']
