@@ -42,5 +42,5 @@ class MyLibrary(object):
         toX = float(end_x) / 100 * width
         fromY = float(start_y) / 100 * height
         toY = float(end_y) / 100 * height
-        driver.execute_script("mobile:flickFromTo",
+        driver.execute_script("mobile:dragFromToForDuration",
                               {"duration":duration,"element":None,"fromX":int(fromX),"fromY":int(fromY),"toX":int(toX),"toY":int(toY)})
