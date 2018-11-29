@@ -18,21 +18,9 @@ class MyLibrary(object):
             self.applib = BuiltIn().get_library_instance(self.alias)
         return self.applib._current_application()
 
-    def swipe_scroll_down(self):
+    def swipe_scroll(self,direction):
         driver = self._current_application()
-        driver.execute_script("mobile: scroll", {'direction': 'down'})
-
-    def swipe_scroll_up(self):
-        driver = self._current_application()
-        driver.execute_script("mobile: scroll", {'direction': 'up'})
-
-    def swipe_scroll_left(self):
-        driver = self._current_application()
-        driver.execute_script("mobile: scroll", {'direction': 'left'})
-
-    def swipe_scroll_right(self):
-        driver = self._current_application()
-        driver.execute_script("mobile: scroll", {'direction': 'right'})
+        driver.execute_script("mobile: scroll", {'direction': direction})
 
     def swipe_drag(self,start_x,start_y,end_x,end_y,duration=1000):
         driver = self._current_application()
@@ -43,4 +31,9 @@ class MyLibrary(object):
         fromY = float(start_y) / 100 * height
         toY = float(end_y) / 100 * height
         driver.execute_script("mobile:dragFromToForDuration",
-                              {"duration":duration,"element":None,"fromX":int(fromX),"fromY":int(fromY),"toX":int(toX),"toY":int(toY)})
+                              {"duration":duration,"element":None,
+                               "fromX":int(fromX),"fromY":int(fromY),"toX":int(toX),"toY":int(toY)})
+        
+    def swipe_swipe(self,direction):
+        driver = self._current_application()
+        driver.execute_script("mobile: swipe", {"direction":direction})
